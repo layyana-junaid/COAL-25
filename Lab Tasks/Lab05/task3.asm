@@ -1,4 +1,3 @@
-TITLE task
 include irvine32.inc
 
 .data
@@ -33,8 +32,6 @@ printarr:
     call Crlf ; for leaving lines for clean output
     inc esi
     loop printarr
-; The above code is already generalised to account for separate data types therefore the only change needed for 
-; WORD or DWORD operation is changing al to ax and eax respectively
     exit
 main endp
 end main
