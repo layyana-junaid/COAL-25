@@ -2,7 +2,7 @@
 ;Lab04 task 8
 .data
     val1 BYTE 10h      ; 8-bit value
-    val2 WORD 5000h    ; 16-bit value
+    val2 WORD 8000h    ; 16-bit value
     val3 DWORD 0FFFFh  ; 32-bit value
     val4 WORD 7FFFh    ; 16-bit value
 
