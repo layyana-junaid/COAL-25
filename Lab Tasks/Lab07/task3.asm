@@ -15,7 +15,7 @@ main proc
     ; Calculate sum of arr1
     mov esi, OFFSET arr1
     mov ecx, arraySize
-    call SumArray
+    call SumArray1
     push eax        
     
     ; Display sum of arr1
@@ -27,7 +27,7 @@ main proc
     ; Calculate sum of arr2
     mov esi, OFFSET arr2
     mov ecx, arraySize
-    call SumArray
+    call SumArray2
     push eax       
     
     ; Display sum of arr2
@@ -39,7 +39,7 @@ main proc
     ; Calculate sum of arr3
     mov esi, OFFSET arr3
     mov ecx, arraySize
-    call SumArray
+    call SumArray3
     push eax        
     
     ; Display sum of arr3
@@ -62,7 +62,7 @@ main proc
     call Crlf
 main endp
 
-SumArray proc
+SumArray1 proc
     xor eax, eax        ; Clear sum register
     xor ebx, ebx        ; Clear index register
     
@@ -73,5 +73,33 @@ SumArray proc
         loop SumLoop
     
     ret
-SumArray endp
+SumArray1 endp
+
+
+SumArray2 proc
+    xor eax, eax        
+    xor ebx, ebx        
+    
+    SumLoop:
+        mov bx, [esi]  
+        add eax, ebx    
+        add esi, 2      
+        loop SumLoop
+    
+    ret
+SumArray2 endp
+
+
+SumArray3 proc
+    xor eax, eax      
+    xor ebx, ebx       
+    
+    SumLoop:
+        mov bx, [esi]   
+        add eax, ebx    
+        add esi, 2      
+        loop SumLoop
+    
+    ret
+SumArray3 endp
 end main
