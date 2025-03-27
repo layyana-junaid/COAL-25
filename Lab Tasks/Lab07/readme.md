@@ -3,3 +3,6 @@
 
 #### Task 2:-
 ![image](https://github.com/user-attachments/assets/6876e8cc-1323-4b25-afb2-f38fa3f69695)
+
+#### Task 3:-
+![image](https://github.com/user-attachments/assets/c69dd0c6-134f-43aa-b7c4-170a14c78180)
