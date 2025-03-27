@@ -30,7 +30,6 @@ DisplayOriginal:
     mov esi, 0                      
     mov ecx, arraySize             
 
-    ; Push all elements from source array onto the stack
 PushLoop:
     mov ax, sourceArray[esi]        
     push ax                        
@@ -41,14 +40,12 @@ PushLoop:
     mov ecx, arraySize              
     mov edi, 0                  
 
-    ; Pop all elements from stack into destination array
+    ; Pop all elements from stack 
 PopLoop:
     pop ax                        
     mov destArray[edi], ax         
     add edi, TYPE WORD            
     loop PopLoop
-
-    ; Display copied array
     mov edx, OFFSET copiedMsg
     call WriteString
     
@@ -63,8 +60,5 @@ DisplayCopied:
     loop DisplayCopied
     
     call Crlf                    
-
-    ; Exit the program
-    invoke ExitProcess, 0
 main endp
 end main
